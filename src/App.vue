@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useCounterStore } from './stores/counter'
+import PwaStatus from './components/PwaStatus.vue'
 
 const counter = useCounterStore()
 </script>
@@ -14,8 +15,16 @@ const counter = useCounterStore()
       Incrementar
     </button>
   </div>
+  
+  <div class="pwa-container">
+    <PwaStatus />
+  </div>
 </template>
 
 <style scoped>
 /* Estilo opcional */
+.pwa-container {
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
 </style>
